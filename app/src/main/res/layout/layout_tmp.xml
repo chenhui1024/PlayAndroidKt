@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    <View-->
+        <!--        android:id="@+id/left_header"-->
+        <!--        android:layout_width="200dp"-->
+        <!--        android:layout_height="200dp"-->
+        <!--        android:background="#123"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--    <View-->
+        <!--        android:id="@+id/title"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="20dp"-->
+        <!--        android:background="#234"-->
+        <!--        app:layout_constraintBottom_toTopOf="@id/desc"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toEndOf="@id/left_header"-->
+        <!--        app:layout_constraintTop_toTopOf="@id/left_header" />-->
+
+        <!--    <View-->
+        <!--        android:id="@+id/desc"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="20dp"-->
+        <!--        app:layout_constraintStart_toEndOf="@id/left_header"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/title"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintBottom_toBottomOf="@id/left_header"-->
+        <!--        android:background="#456" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/parent"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:background="#123" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/child"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="#456"-->
+<!--            app:layout_constraintCircleRadius="100dp"-->
+<!--            app:layout_constraintCircleAngle="180"-->
+<!--            app:layout_constraintCircle="@id/parent" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:background="#666"-->
+<!--            android:text="11"-->
+<!--            app:layout_constraintWidth_max="wrap"-->
+<!--            app:layout_constraintWidth_percent="0.5"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
+
+
+        <!--====================================-->
+
+<!--        <androidx.constraintlayout.helper.widget.Layer-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            app:constraint_referenced_ids="tv_a, tv_b"-->
+<!--            android:padding="20dp"-->
+<!--            android:background="#000"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_a"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="A"-->
+<!--            android:background="#f00"-->
+<!--            android:gravity="center"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_b"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="B"-->
+<!--            android:background="#0f0"-->
+<!--            app:layout_constrainedWidth="true"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tv_a"-->
+<!--            app:layout_constraintStart_toStartOf="@id/tv_a"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/tv_a" />-->
+
+        <!--====================================-->
+
+<!--        <androidx.constraintlayout.helper.widget.Flow-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:flow_verticalGap="10dp"-->
+<!--            app:flow_wrapMode="aligned"-->
+<!--            app:flow_verticalAlign="baseline"-->
+<!--            app:flow_maxElementsWrap="15"-->
+<!--            app:constraint_referenced_ids="tv_1,tv_2,tv_3,tv_4,tv_5,tv_6,tv_7,tv_8,tv_9,tv_10,tv_11" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="#f00"-->
+<!--            android:text="1111" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="#f00"-->
+<!--            android:text="2222" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="3333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="4444" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="5555" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_6"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="65666666666" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_7"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="777777" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_8"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="888888" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_9"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="999999" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_10"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="10" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_11"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="11" />-->
+
+        <!--====================================-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_a"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintHorizontal_weight="1"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/tv_b"-->
+<!--            app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--            android:background="#f00"-->
+<!--            android:text="AAA" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_b"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintHorizontal_weight="2"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tv_a"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/tv_c"-->
+<!--            android:background="#0f0"-->
+<!--            android:text="BBB" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_c"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintHorizontal_weight="3"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tv_b"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:background="#00f"-->
+<!--            android:text="CCC" />-->
+
+        <!--====================================-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_number"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="112233445566"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="77889900"-->
+<!--            app:layout_constraintHorizontal_bias="1"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tv_number"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintVertical_bias="0.2"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:text="button" />-->
+
+        <!--====================================-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minWidth="30dp"-->
+<!--            android:background="#f00"-->
+<!--            android:text="1"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <!--====================================-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="AAAAAAAAAAAAAAAAAAAAAAAABBB"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:layout_marginStart="100dp"-->
+<!--            android:layout_marginEnd="100dp"-->
+<!--            app:layout_constraintWidth_default="spread"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f00"-->
+<!--            android:text="AAAAAAAAAAAAAAAAAAAAAAAABBB"-->
+<!--            android:layout_marginTop="150dp"-->
+<!--            android:layout_marginStart="100dp"-->
+<!--            android:layout_marginEnd="100dp"-->
+<!--            app:layout_constraintWidth_default="wrap"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <!--====================================-->
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:roundPercent="0.5"
+                    app:round="20dp"
+                    app:crossfade="0.2"
+                    app:altSrc="@drawable/ic_home"
+                    android:src="@mipmap/ic_launcher" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

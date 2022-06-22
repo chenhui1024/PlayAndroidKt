@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: 'other.gradle'
+
+task testEx {
+    doLast {
+        println "version: ${versionEx}, address: ${urlEx}"
+    }
+}
+
+apply plugin: CustomPlugin
+class CustomPlugin implements Plugin<Project> {
+
+    @Override
+    void apply(Project project) {
+        project.task('CustomPluginTask') {
+            doLast {
+                println 'CustomPluginTask run'
+            }
+        }
+    }
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId "com.example.playandroid_kt"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx..runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "code"
+    productFlavors {
+        part {
+            // Assigns this product flavor to the "mode" flavor dimension.
+            dimension "code"
+        }
+
+        full {
+            dimension "code"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildFeatures {
+        // DataBinding 开启
+        dataBinding = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.startup:startup-runtime:1.0.0'
+    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'androidx..ext:junit:1.1.1'
+//    androidTestImplementation 'androidx..espresso:espresso-core:3.2.0'
+
+    //依赖协程核心库
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines"
+    //依赖当前平台所对应的平台库
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines"
+
+    implementation "com.squareup.okhttp3:okhttp:4.7.2"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.5.21"
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //room
+    def room_version = "2.4.2"
+    api "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    // optional - Paging 3 Integration
+    api "androidx.room:room-paging:2.5.0-alpha01"
+    //适配suspend
+    api "androidx.room:room-ktx:$room_version"
+
+    //paging相关组件
+    def paging_version = "3.1.1"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+}
+
+task method {
+    group = 'build' //配置分组
+    description = '' //配置描述
+
+    println """111
+    222
+            333
+                444
+666
+"""
+
+    String name = "113"
+    if (name.equals("113")) {
+        println("113")
+    } else {
+        println("111")
+    }
+}
+
+//def Task hello = task(helloworld)
+//hello.group = 'hello'
+//hello.description = 'hello world'
+//hello.doLast {
+//    println 'hello world 11!'
+//}
+
+//def Task hello = task(helloworld, group: BasePlugin.BUILD_GROUP)
+//hello.doLast {
+//    println 'hello world 11!'
+//}
+
+tasks.create('hello')  {
+    println 'hello world !'
+}
+
+task go(dependsOn: hello) {
+    println 'go for it'
+}

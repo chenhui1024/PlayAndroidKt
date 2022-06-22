@@ -1,0 +1,3 @@
+rootProject.name='playandroid_kt'
+include ':app'
+include ':myapplication'

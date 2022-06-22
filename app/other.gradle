@@ -1,0 +1,4 @@
+ext {
+    versionEx = '1.0'
+    urlEx = 'test url'
+}
